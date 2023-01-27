@@ -30,9 +30,14 @@ public class VirtualPetApplication {
                 pet.nap();
                 System.out.println("Let " + pet.getName() + "take a nap" + ".");
             }
-            else {
+            else if(userChoice == 4) {
+                System.exit(0);
+
+            } else {
                 System.out.println("You picked the wrong number");
             }
+
+
 
 
             System.out.println("Status of Ginger's hunger " + pet.getHungerLevel());
