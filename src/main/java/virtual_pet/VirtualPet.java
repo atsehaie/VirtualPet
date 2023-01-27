@@ -14,7 +14,7 @@ public class VirtualPet {
         this.fatigue = 1;
     }
 
-    public VirtualPet(String name, int hungerLevel, int boredom, int fatigue) {
+    public VirtualPet( String name, int hungerLevel, int boredom, int fatigue) {
         this.name = name;
         this.hungerLevel = hungerLevel;
         this.boredom = boredom;
