@@ -6,14 +6,16 @@ import java.util.Map;
 
 public class VirtualPetShelter {
     Map<String, VirtualPet> pets = new HashMap<>();
-    public void VirtualPetShelter() {
+
+    public  VirtualPetShelter() {
         pets.put("Cat", new VirtualPet());
         pets.put("Dog", new VirtualPet("Fluffy", 3, 2, 5));
-        pets.put("Horse", new VirtualPet("Speedy", 2, 6,1));
+        pets.put("Horse", new VirtualPet("Speedy", 2, 6, 1));
         for (Map.Entry pet : pets.entrySet()) {
             System.out.println(pet);
         }
     }
+
     Collection<VirtualPet> getAllVirtualPets() {
         return pets.values();
     }
@@ -23,20 +25,20 @@ public class VirtualPetShelter {
     }
 
     public void feedAll() {
-        for (VirtualPet pet: pets.values()) {
-        pet.feed();
+        for (VirtualPet pet : pets.values()) {
+            pet.feed();
         }
     }
 
     public void napAll() {
-        for (VirtualPet pet: pets.values()) {
-        pet.nap();
+        for (VirtualPet pet : pets.values()) {
+            pet.nap();
         }
     }
 
     public void playAll() {
-        for (VirtualPet pet: pets.values()) {
-        pet.play();
+        for (VirtualPet pet : pets.values()) {
+            pet.play();
         }
     }
 
@@ -51,7 +53,7 @@ public class VirtualPetShelter {
 
 
     public void tick() {
-        for(HashMap.Entry<String,VirtualPet> entry: pets.entrySet()){
+        for (HashMap.Entry<String, VirtualPet> entry : pets.entrySet()) {
             VirtualPet pet = entry.getValue();
             pet.tick();
         }
