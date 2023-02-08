@@ -6,50 +6,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VirtualPetShelterTest {
     @Test
-    public void shouldFeedAllPets() {
-        VirtualPetShelter VirtualPetShelterUnderTest = new VirtualPetShelter();
-        VirtualPetShelterUnderTest.feedAll();
-
-        VirtualPet cat = VirtualPetShelterUnderTest.getPet("Cat");
-        assertEquals(1, cat.getHungerLevel());
-
-        VirtualPet dog = VirtualPetShelterUnderTest.getPet("Dog");
-        assertEquals(2, dog.getHungerLevel());
-
-        VirtualPet horse = VirtualPetShelterUnderTest.getPet("Horse");
-        assertEquals(1, horse.getHungerLevel());
-
+    public void shouldWalkDog() {
+        OrganicDog test = new OrganicDog("test", 10, 10, 10);
+        test.walk();
+        assertEquals(9, test.getBoredom());
     }
 
     @Test
-    public void shouldNapAllPets() {
-        VirtualPetShelter VirtualPetShelterUnderTest = new VirtualPetShelter();
-        VirtualPetShelterUnderTest.napAll();
-
-        VirtualPet cat = VirtualPetShelterUnderTest.getPet("Cat");
-        assertEquals(0, cat.getFatigue());
-
-        VirtualPet dog = VirtualPetShelterUnderTest.getPet("Dog");
-        assertEquals(4, dog.getFatigue());
-
-        VirtualPet horse = VirtualPetShelterUnderTest.getPet("Horse");
-        assertEquals(0, horse.getFatigue());
-
+    public void shouldOilRoboticDog() {
+        RoboticDog test = new RoboticDog("test", 5, 5);
+        test.oilLevels(10);
+        test.refillOil();
+        assertEquals(0, test.getOilNeeded());
     }
 
     @Test
-    public void shouldPlayAllPets() {
-        VirtualPetShelter VirtualPetShelterUnderTest = new VirtualPetShelter();
-        VirtualPetShelterUnderTest.playAll();
-
-        VirtualPet cat = VirtualPetShelterUnderTest.getPet("Cat");
-        assertEquals(3, cat.getBoredom());
-
-        VirtualPet dog = VirtualPetShelterUnderTest.getPet("Dog");
-        assertEquals(1, dog.getBoredom());
-
-        VirtualPet horse = VirtualPetShelterUnderTest.getPet("Horse");
-        assertEquals(5, horse.getBoredom());
-
+    public void shouldCheckMaintenanceRoboticCat() {
+        RoboticCat test = new RoboticCat("test", 2, 5);
+        test.increaseMaintenanceNeeded();
+        assertEquals(5, 4);
     }
 }

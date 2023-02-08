@@ -18,6 +18,7 @@ public class Robotic extends VirtualPet {
         return maintenanceNeeded;
     }
 
+
     public void increaseOilNeeded() {
         oilNeeded++;
     }
@@ -27,7 +28,15 @@ public class Robotic extends VirtualPet {
     }
 
     public void walk() {
-        this.oilNeeded++;
-        this.maintenanceNeeded++;
+        increaseOilNeeded();
+        increaseMaintenanceNeeded();
+    }
+
+    public void oilLevels(int i) {
+        oilNeeded = i;
+    }
+
+    public int refillOil() {
+        return oilNeeded = 0;
     }
 }
