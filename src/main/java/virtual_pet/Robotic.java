@@ -1,11 +1,13 @@
 package virtual_pet;
 
 public class Robotic extends VirtualPet {
-
+    private String name;
     private int maintenanceNeeded = 0;
     private int oilNeeded = 0;
 
     public Robotic(String name, int oilNeeded, int maintenanceNeeded) {
+        super(name, 0, 0, 0);
+        this.name = name;
         this.oilNeeded = oilNeeded;
         this.maintenanceNeeded = maintenanceNeeded;
     }
@@ -30,13 +32,5 @@ public class Robotic extends VirtualPet {
     public void walk() {
         increaseOilNeeded();
         increaseMaintenanceNeeded();
-    }
-
-    public void oilLevels(int i) {
-        oilNeeded = i;
-    }
-
-    public int refillOil() {
-        return oilNeeded = 0;
     }
 }

@@ -39,15 +39,29 @@ public class VirtualPetShelter {
         }
     }
 
-    public void playAllRobotic() {
-        for (VirtualPet pet : roboticPets.values()) {
-            pet.play();
+    public void walkAllRobotic() {
+        for (Robotic pet : roboticPets.values()) {
+            pet.walk();
         }
+    }
+
+    public void adopt(String petName) {
+        roboticPets.remove(petName, new VirtualPet());
+        organicPets.remove(petName, new VirtualPet());
+    }
+
+    public void admit(String petName) {
+        roboticPets.put(petName, new Robotic(petName, 2, 2));
+        organicPets.put(petName, new Organic(petName, 1, 2, 3));
     }
 
 
     public void tick() {
         for (HashMap.Entry<String, Organic> entry : organicPets.entrySet()) {
+            VirtualPet pet = entry.getValue();
+            pet.tick();
+        }
+        for (HashMap.Entry<String, Robotic> entry : roboticPets.entrySet()) {
             VirtualPet pet = entry.getValue();
             pet.tick();
         }
