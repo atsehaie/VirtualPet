@@ -35,7 +35,7 @@ public class VirtualPetApplication {
                 System.out.println("You have just fed organic cat and dog ");
             } else if (userChoice == 4) {
                 shelter.walkAllRobotic();
-                System.out.println("You have just walked with all robotic pets ");
+                System.out.println("You have just walked all robotic pets ");
             } else if (userChoice == 5) {
                 System.exit(0);
 
@@ -46,7 +46,7 @@ public class VirtualPetApplication {
 
             System.out.println();
             System.out.println("Status of all pets in the shelter ");
-            for (VirtualPet vPet : shelter.getAllOrganic()) {
+            for (Organic vPet : shelter.getAllOrganic()) {
                 System.out.println("Status of " + vPet.getName() + " hunger " + vPet.getHungerLevel());
                 System.out.println("Status of " + vPet.getName() + " boredom " + vPet.getBoredom());
             }

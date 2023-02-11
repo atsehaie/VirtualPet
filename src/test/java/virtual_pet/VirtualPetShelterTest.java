@@ -11,7 +11,7 @@ public class VirtualPetShelterTest {
     public void shouldFeedAllOrganic() {
         VirtualPetShelter VirtualPetShelterUnderTest = new VirtualPetShelter();
         VirtualPetShelterUnderTest.feedAllOrganic();
-        VirtualPet organicDog = VirtualPetShelterUnderTest.getPet("Organic Dog");
+        Organic organicDog = VirtualPetShelterUnderTest.getPet("Organic Dog");
         assertEquals(1, organicDog.getHungerLevel());
     }
 

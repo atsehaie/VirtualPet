@@ -23,12 +23,12 @@ public class VirtualPetShelter {
         return roboticPets.values();
     }
 
-    public VirtualPet getPet(String pet) {
+    public Organic getPet(String pet) {
         return organicPets.get(pet);
     }
 
     public void feedAllOrganic() {
-        for (VirtualPet pet : organicPets.values()) {
+        for (Organic pet : organicPets.values()) {
             pet.feed();
         }
     }
