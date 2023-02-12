@@ -27,7 +27,7 @@ public class VirtualPetShelterTest {
     public void shouldNapAllOrganic() {
         VirtualPetShelter VirtualPetShelterUnderTest = new VirtualPetShelter();
         VirtualPetShelterUnderTest.napAllOrganic();
-        VirtualPet organicCat = VirtualPetShelterUnderTest.getPet("Organic Cat");
-        assertEquals(4, organicCat.getFatigue());
+        Organic organicCat = VirtualPetShelterUnderTest.getPet("Organic Cat");
+        assertEquals(3, organicCat.getFatigue());
     }
 }

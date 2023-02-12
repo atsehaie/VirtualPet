@@ -9,8 +9,8 @@ public class VirtualPetShelter {
     Map<String, Organic> organicPets = new HashMap<>();
 
     public VirtualPetShelter() {
-        organicPets.put("Organic Cat", new OrganicCat("Fluffy", 5, 5, 5));
-        organicPets.put("Organic Dog", new OrganicDog("Leo", 2, 1, 4));
+        organicPets.put("Organic Cat", new OrganicCat("Fluffy", 5, 5, 5, 4));
+        organicPets.put("Organic Dog", new OrganicDog("Leo", 2, 1, 4, 4));
         roboticPets.put("Robotic Dog", new RoboticDog("Champ", 1, 3));
         roboticPets.put("Robotic Cat", new RoboticCat("Snow", 6, 5));
     }
@@ -34,7 +34,7 @@ public class VirtualPetShelter {
     }
 
     public void napAllOrganic() {
-        for (VirtualPet pet : organicPets.values()) {
+        for (Organic pet : organicPets.values()) {
             pet.nap();
         }
     }
@@ -52,17 +52,17 @@ public class VirtualPetShelter {
 
     public void admit(String petName) {
         roboticPets.put(petName, new Robotic(petName, 2, 2));
-        organicPets.put(petName, new Organic(petName, 1, 2, 3));
+        organicPets.put(petName, new Organic(petName, 1, 2, 3, 4));
     }
 
 
     public void tick() {
         for (HashMap.Entry<String, Organic> entry : organicPets.entrySet()) {
-            VirtualPet pet = entry.getValue();
+            Organic pet = entry.getValue();
             pet.tick();
         }
         for (HashMap.Entry<String, Robotic> entry : roboticPets.entrySet()) {
-            VirtualPet pet = entry.getValue();
+            Robotic pet = entry.getValue();
             pet.tick();
         }
     }

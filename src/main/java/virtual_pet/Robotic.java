@@ -6,7 +6,7 @@ public class Robotic extends VirtualPet {
     private int oilNeeded = 0;
 
     public Robotic(String name, int oilNeeded, int maintenanceNeeded) {
-        super(name, 0, 0);
+        super(name);
         this.name = name;
         this.oilNeeded = oilNeeded;
         this.maintenanceNeeded = maintenanceNeeded;
@@ -32,5 +32,10 @@ public class Robotic extends VirtualPet {
     public void walk() {
         increaseOilNeeded();
         increaseMaintenanceNeeded();
+    }
+
+    public void tick() {
+        this.oilNeeded++;
+        this.maintenanceNeeded++;
     }
 }
