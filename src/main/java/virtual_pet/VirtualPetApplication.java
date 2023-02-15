@@ -76,11 +76,11 @@ public class VirtualPetApplication {
                 if (name.equalsIgnoreCase("A")) {
                     System.out.println("Enter dog name");
                     name = input.nextLine();
-                    shelter.admit(name);
+                    shelter.admit(name, "organic");
                 } else if (name.equalsIgnoreCase("B")) {
                     System.out.println("Enter cat name");
                     name = input.nextLine();
-                    shelter.admit(name);
+                    shelter.admit(name, "organic");
                 } else {
                     System.out.println("Invalid input");
                 }
@@ -91,15 +91,15 @@ public class VirtualPetApplication {
                 if (name.equalsIgnoreCase("B")) {
                     System.out.println("Enter cat name");
                     name = input.nextLine();
-                    shelter.admit(name);
+                    shelter.admit(name, "robotic");
                 } else if (name.equalsIgnoreCase("A")) {
                     System.out.println("Enter dog name");
                     name = input.nextLine();
-                    shelter.admit(name);
+                    shelter.admit(name, "robotic");
                 } else {
                     System.out.println("Invalid input");
                 }
-                
+
             } else if (userChoice == 9) {
                 System.exit(0);
 

@@ -3,6 +3,7 @@ package virtual_pet;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class VirtualPetShelter {
     Map<String, Robotic> roboticPets = new HashMap<>();
@@ -50,9 +51,14 @@ public class VirtualPetShelter {
         organicPets.remove(petName, new VirtualPet());
     }
 
-    public void admit(String petName) {
-        roboticPets.put(petName, new Robotic(petName, 2, 2));
-        organicPets.put(petName, new Organic(petName, 1, 2, 3, 4));
+    public void admit(String petName, String petType) {
+        if (Objects.equals(petType, "organic")) {
+            organicPets.put(petName, new Organic(petName, 1, 2, 3, 4));
+        } else if (Objects.equals(petType, "robotic")) {
+            roboticPets.put(petName, new Robotic(petName, 2, 2));
+        } else {
+            System.out.println("Pet type invalid ");
+        }
     }
 
 
