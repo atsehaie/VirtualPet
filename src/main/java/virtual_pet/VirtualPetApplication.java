@@ -48,13 +48,12 @@ public class VirtualPetApplication {
                 if (name.equalsIgnoreCase("B")) {
                     System.out.println("Enter cat name");
                     name = input.nextLine();
-                    shelter.adopt(name);
+                    shelter.adopt(name, "organic");
                 } else {
                     System.out.println("Enter dog name");
                     name = input.nextLine();
-                    shelter.adopt(name);
+                    shelter.adopt(name, "organic");
                 }
-                System.out.println("You selected B. You have just adopted an organic cat. ");
             } else if (userChoice == 6) {
                 System.out.println("You want to adopt a robotic pet, great! Would you like to adopt: ");
                 System.out.println(" \n A. Robotic Dog \n B. Robotic Cat");
@@ -62,13 +61,12 @@ public class VirtualPetApplication {
                 if (name.equalsIgnoreCase("A")) {
                     System.out.println("Enter dog name");
                     name = input.nextLine();
-                    shelter.adopt(name);
+                    shelter.adopt(name, "robotic");
                 } else {
                     System.out.println("Enter cat name");
                     name = input.nextLine();
-                    shelter.adopt(name);
+                    shelter.adopt(name, "robotic");
                 }
-                System.out.println("You selected A. You have just adopted a robotic dog. ");
             } else if (userChoice == 7) {
                 System.out.println("You want to admit an organic pet. Would you like to admit: ");
                 System.out.println(" \n A. Organic Dog \n B. Organic Cat ");

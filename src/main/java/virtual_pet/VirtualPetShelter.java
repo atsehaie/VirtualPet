@@ -46,9 +46,14 @@ public class VirtualPetShelter {
         }
     }
 
-    public void adopt(String petName) {
-        roboticPets.remove(petName, new VirtualPet());
-        organicPets.remove(petName, new VirtualPet());
+    public void adopt(String petName, String petType) {
+        if (Objects.equals(petType, "robotic")) {
+            roboticPets.remove(petName);
+        } else if (Objects.equals(petType, "organic")) {
+            organicPets.remove(petName);
+        } else {
+            System.out.println("Pet type invalid ");
+        }
     }
 
     public void admit(String petName, String petType) {
